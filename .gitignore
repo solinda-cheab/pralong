@@ -1,0 +1,38 @@
+# ======================
+# Next.js
+# ======================
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+frontend/.env
+
+# ======================
+# Laravel
+# ======================
+backend/vendor/
+backend/storage/*.key
+backend/.env
+
+# ======================
+# Logs
+# ======================
+*.log
+
+# ======================
+# OS
+# ======================
+.DS_Store
+Thumbs.db
+
+# ======================
+# IDE
+# ======================
+.vscode/
+.idea/
+
+# ======================
+# Build
+# ======================
+dist/
+coverage/
