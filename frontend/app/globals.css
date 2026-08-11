@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f6f5f0;
+  color: #0b2320;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Signature motif: a scantron / answer-sheet bubble grid.
+   Used as a subtle background texture, never as decoration alone —
+   each instance sits behind content that's literally about answers/scoring. */
+.bubble-grid {
+  background-image: radial-gradient(circle, currentColor 1.4px, transparent 1.6px);
+  background-size: 18px 18px;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid #3fe0a5;
+  outline-offset: 3px;
+}
+
+/* Filled bubble marker used inline as a bullet replacement */
+.bubble-bullet {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1em;
+  height: 1.1em;
+  border-radius: 9999px;
+  border: 1.5px solid currentColor;
+  flex-shrink: 0;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

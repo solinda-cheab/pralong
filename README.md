@@ -19,6 +19,16 @@ Pralong is a full-stack online assessment platform that enables organizations, s
 - PostgreSQL
 
 ## Project Structure
+
+```text
+pralong/
+├── frontend/
+├── backend/
+├── docs/
+├── .gitignore
+└── README.md
+```
+
 ## Features
 
 - Authentication
